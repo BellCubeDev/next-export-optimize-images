@@ -4,7 +4,7 @@ description: This page introduces how to change the behavior of this library.
 
 # Basic Configuration
 
-Default behavior can be changed as needed.  
+Default behavior can be changed as needed.
 Create `export-images.config.js` in the root.
 
 ```js title="export-images.config.js"
@@ -17,6 +17,8 @@ const config = {
 
 module.exports = config
 ```
+
+Note for ES Module users: The configuration file must not contain top-level await.
 
 ## Optional fields
 
@@ -32,7 +34,7 @@ Specify if you are customizing the default output directory, such as `next expor
 - Type: string
 - Default: '\_next/static/chunks/images'
 
-You can customize the directory to output optimized images.  
+You can customize the directory to output optimized images.
 The default is `'_next/static/chunks/images'`.
 
 e.g. If `'_optimized'` is set.
@@ -47,7 +49,7 @@ e.g. If `'_optimized'` is set.
 - Type: string
 - Default: 'node_modules/.cache'
 
-You can customize the directory to cache the optimized images.  
+You can customize the directory to cache the optimized images.
 The default is `node_modules/.cache`.
 
 ### `externalImageDir`
@@ -70,7 +72,7 @@ The default is `'_next/static/media'`.
 - Type: string
 - Default: ''
 
-Required if you have set `basePath` in `next.config.js`.  
+Required if you have set `basePath` in `next.config.js`.
 Please set the same value.
 
 ### `filenameGenerator`
@@ -104,7 +106,7 @@ const config = {
 
 #### ❗️Attention
 
-When making this setting, make sure that the file names (including the path part) of different images do not cover each other.  
+When making this setting, make sure that the file names (including the path part) of different images do not cover each other.
 Specifically, include the name, width, quality, and extension in the return value. If path is not included, all src's should be specified with `import` or `require` so that they can be distinguished by their hash value even if they have the same filename.
 
 ### `sourceImageParser`
@@ -174,12 +176,12 @@ const config = {
 | webp | https://sharp.pixelplumbing.com/api-output#webp |
 | avif | https://sharp.pixelplumbing.com/api-output#avif |
 
-You can set optimization options for each extension.  
+You can set optimization options for each extension.
 Please refer to the official sharp documentation for more information.
 
 ### `convertFormat`
 
-- Type: Array<Array<Format, Format>>  
+- Type: Array<Array<Format, Format>>
   Format → "jpeg" | "jpg" | "png" | "webp" | "avif"
 
 It allows you to convert images from any extension to another extension.
@@ -209,8 +211,8 @@ The original image will be kept, `img.png` will be converted to webp format and 
 
 You can generate extra images in extensions specified.
 
-This setting affects the extension displayed in the `Picture` component.  
-The order is also important.  
+This setting affects the extension displayed in the `Picture` component.
+The order is also important.
 For example, if `webp` is first, then `webp` will be displayed first.
 
 See [Picture component](/docs/Features/picture-component) for details.
@@ -219,7 +221,7 @@ See [Picture component](/docs/Features/picture-component) for details.
 
 - Type: Array<string\> | (() => Array<string\> | Promise<Array<string\>\>)
 
-You can directly specify the URL of an external image.  
+You can directly specify the URL of an external image.
 This is useful in cases where it is not known what images will be used for the build using variables, for example.
 
 https://next-export-optimize-images.vercel.app/docs/Features/external-images#when-specifying-an-external-image-url-with-a-variable

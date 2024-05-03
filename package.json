@@ -20,6 +20,7 @@
   "license": "MIT",
   "author": "dc7290 <dhkh.cba0927@gmail.com>",
   "main": "dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "dist/index.d.ts",
   "bin": "bin/index.js",
   "files": [
