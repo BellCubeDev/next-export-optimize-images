@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/) and this 
 
 ## [Released](https://github.com/dc7290/next-export-optimize-images/releases)
 
+## [5.0.0](https://github.com/BellCubeDev/next-export-optimize-images/compare/v4.3.1...v5.0.0) (2024-05-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* May break existing Webpack-based setups which rely on the wonky setup to function
+
+When using ESM-style code with Turbopack, you must set `"type": "module"` in `package.json`. However, doing so makes using a config for next-export-optimize-images impossible as you cannot import ESM from CJS but `.js` files in the project must be ESM.
+
+### Features
+
+* Export ESM alongside CommonJS ([a1551fc](https://github.com/BellCubeDev/next-export-optimize-images/commit/a1551fcebe6f52dbfb40053ea878a381eedab068))
+
 ## [4.3.1](https://github.com/dc7290/next-export-optimize-images/compare/v4.3.0...v4.3.1) (2024-04-14)
 
 

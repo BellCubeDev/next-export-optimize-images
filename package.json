@@ -1,6 +1,6 @@
 {
   "name": "@bellcubedev/next-export-optimize-images",
-  "version": "4.3.1",
+  "version": "5.0.0",
   "description": "(FORK: Add ESM support) Optimize images at build time with Next.js.",
   "keywords": [
     "next.js",
