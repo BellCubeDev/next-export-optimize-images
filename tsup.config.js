@@ -6,7 +6,7 @@ const cfg = {
   clean: true,
   treeshake: false,
   dts: true,
-  format: ['cjs'],
+  format: ['esm', 'cjs']
 }
 
 export default defineConfig([

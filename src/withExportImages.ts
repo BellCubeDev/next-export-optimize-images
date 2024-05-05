@@ -4,6 +4,7 @@ import colors from 'ansi-colors'
 import appRootPath from 'app-root-path'
 import fs from 'fs-extra'
 import type { NextConfig } from 'next'
+import url from 'node:url'
 
 import { Config } from './utils/getConfig'
 
@@ -23,8 +24,7 @@ const withExportImages = async (
 
   let config: Config = {}
   if (existConfig) {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const configSrc = require(resolvedConfigPath) as Config
+    const configSrc = import(url.pathToFileURL(resolvedConfigPath).toString()) as Config
     config = configSrc
     if (configSrc.remoteImages) {
       if (typeof configSrc.remoteImages === 'function') {
