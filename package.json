@@ -1,7 +1,7 @@
 {
-  "name": "next-export-optimize-images",
+  "name": "@bellcubedev/next-export-optimize-images",
   "version": "4.3.1",
-  "description": "Optimize images at build time with Next.js.",
+  "description": "(FORK: Add ESM support) Optimize images at build time with Next.js.",
   "keywords": [
     "next.js",
     "static",
@@ -11,14 +11,14 @@
   ],
   "homepage": "https://next-export-optimize-images.vercel.app",
   "bugs": {
-    "url": "https://github.com/dc7290/next-export-optimize-images/issues"
+    "url": "https://github.com/BellCubeDev/next-export-optimize-images/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dc7290/next-export-optimize-images.git"
+    "url": "https://github.com/BellCubeDev/next-export-optimize-images.git"
   },
   "license": "MIT",
-  "author": "dc7290 <dhkh.cba0927@gmail.com>",
+  "author": "BellCubeDev",
   "main": "dist/index.js",
   "module": "./dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -111,5 +111,8 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

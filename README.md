@@ -1,3 +1,8 @@
+# THIS IS A FORK TO ADD ESM SUPPORT
+You'll need to test this for yourself. It works in my use case but the tests refuse to run so your mileage may vary.
+
+*Anyway, back to normal readme stuff*
+
 <a href="https://next-export-optimize-images.vercel.app" target="_blank"><img src="https://next-export-optimize-images.vercel.app/og.png" /></a>
 
 <div>
